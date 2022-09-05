@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="/css/bootstrap.css" />
-    <title>RECODETUR :: Endereço de Entrega</title>
+    <title>RECODETUR :: Pagamento</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
@@ -65,54 +65,92 @@
 
         <main>
             <div class="container">
-                <h1>Selecione o Endereço de Entrega</h1>
+                <h1>Selecione a Forma de Pagamento</h1>
                 <h3 class="mb-4">
-                    Selecione o endereço de entrega e clique em <b>Continuar</b> para prosseguir para a <b>Selecão da forma de pagamento</b>
+                    Selecione a forma de pagamento, preencha os dados e clique <b>Continuar</b> para Confirmar o <b>Pedido</b>
                 </h3>
-                <div class="d-flex justify-content-around flex-wrap border rounded-top pt-4 px-3">
+                <div class="d-flex justify-content-between flex-wrap border rounded-top pt-4 px-3">
                     <div class="mb-4 mx-2 flex-even">
-                        <input type="radio" class="btn-check" name="endereco" id="end1" autocomplete="off">
-                        <label class="btn btn-outline-danger p-4 h-100 w-100" for="end1">
+                        <input type="radio" class="btn-check" name="formaPag" id="formaPag" autocomplete="off">
+                        <label class="btn btn-outline-danger p-4 h-100 w-100" for="formaPag">
                             <h3>
-                                <b class="text-dark">Minha Casa</b><br>
+                                <b class="text-dark">Escolha a Forma de Pagamento</b><br>
                                 <hr>
-                                <b>
-                                    Nome do remetente</b><br>
-                                    Rua fulano de tal, 123 <br>
-                                    compulândia/PC <br>
-                                    CEP 01.010-010
+                                <div class="input-group mb-3">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-text">
+                                            <input class="form-check-input mt-0" type="radio" value="pix">
+                                        </div>
+                                            <input type="text" class="form-control" placeholder="PIX">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-text">
+                                                <input class="form-check-input mt-0" type="radio" value="boleto" aria-label="Radio button for following text input">
+                                            </div>
+                                                <input type="text" class="form-control" placeholder="Boleto Bancário">
+                                        </div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-text">
+                                            <input class="form-check-input mt-0" type="radio" value="cartao" checked>
+                                        </div>
+                                            <input type="text" class="form-control" placeholder="Cartão de Crédito">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-text">
+                                            <input class="form-check-input mt-0" type="radio" value="tranferencia" aria-label="Radio button for following text input">
+                                        </div>
+                                            <input type="text" class="form-control" placeholder="Transferência Bancária">
+                                    </div>
+                                </div>    
                             </h3>
                         </label>
                     </div>
                     <div class="mb-4 mx-2 flex-even">
-                        <input type="radio" class="btn-check" name="endereco" id="end2" autocomplete="off">
-                        <label class="btn btn-outline-danger p-4 h-100 w-100" for="end2">
+                        <input type="radio" class="btn-check" name="formaPag" id="formaPag" autocomplete="off">
+                        <label class="btn btn-outline-danger p-4 h-100 w-100" for="formaPag">
                             <h3>
-                                <b class="text-dark">Meu trabalho</b><br>
-                                <hr>
-                                <b>
-                                    Nome do remetente</b><br>
-                                    Rua fulano de tal, 123 <br>
-                                    compulândia/PC <br>
-                                    CEP 01.010-010
+                                <b class="text-dark">Cartão de Crédito</b><br>
                             </h3>
-                        </label>
-                    </div>
-                    <div class="mb-4 mx-2 flex-even">
-                        <input type="radio" class="btn-check" name="endereco" id="end3" autocomplete="off">
-                        <label class="btn btn-outline-danger p-4 h-100 w-100" for="end3">
-                            <h3>
-                                <b class="text-dark">Adicione um endereço</b><br>
                                 <hr>
-                                <b class="align-content-center">
-                                    +
-                            </h3>
+                                <form action="">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="txtNomeCartao" placeholder=" ">
+                                        <label for="txtNomeCartao" class="text-black-50">Nome Impresso no Cartão</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="txtNumCartao" placeholder=" ">
+                                        <label for="txtNumCartao" class="text-black-50">Número do Cartão</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="txtValidade" placeholder=" ">
+                                        <label for="txtValidade" class="text-black-50">Validade do Cartão (mm/aa)</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="txtCodSeg" placeholder=" ">
+                                        <label for="txtCodSeg" class="text-black-50">Código de Segurança</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <select id="numParcelas" class="form-select">
+                                            <option value="1" selected>À vista</option>
+                                            <option value="2">2 x sem juros</option>
+                                            <option value="3">3 x sem juros</option>
+                                            <option value="4">4 x sem juros</option>
+                                            <option value="5">5 x sem juros</option>
+                                            <option value="6">6 x sem juros</option>
+                                            <option value="7">7 x sem juros</option>
+                                            <option value="8">8 x sem juros</option>
+                                            <option value="9">9 x sem juros</option>
+                                            <option value="10">10 x sem juros</option>
+                                        </select>
+                                        <label for="numParcelas" class="text-black-50">Parcelamento</label>
+                                    </div>
+                                </form>
                         </label>
                     </div>
                 </div>
                 <div class="text-end border border-top-0 rounded-bottom p-4 pb-4">
-                        <a href="/pages/fecharpedido.html" class="btn btn-outline-success btn-lg">Voltar</a>
-                        <button class="btn btn-danger btn-lg" type="button" onclick="window.location.href=`/pages/confirmapagamento.html`">Ir para Pagamento</button>
+                        <a href="/pages/confirmacaoendereco.html" class="btn btn-outline-success btn-lg">Voltar</a>
+                        <button class="btn btn-danger btn-lg" type="button" onclick="window.location.href=`/pages/checkout.html`">Confirmar Pagamento</button>
                     </div>
             </div>
         </main>
