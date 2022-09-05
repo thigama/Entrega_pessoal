@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="/css/bootstrap.css" />
-    <title>RECODETUR :: Confimação do Pedido</title>
+    <title>RECODETUR :: ÁREA DO CLIENTE :: ALTERAÇÃO DE SENHA</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
@@ -18,6 +18,7 @@
 </head>
 
 <body style="min-width:372px;">
+
     <div class="d-flex flex-column wrapper">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3 ">
@@ -44,10 +45,10 @@
                     <div class="align-self-end">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="/pages/cadastro.html" class="nav-link text-white">Logado como <b>Fulano de Tal</b></a>
+                                <a href="/pages/cliente.html" class="nav-link text-white">Logado como <b>Fulano de Tal</b></a>
                             </li>
                             <li class="nav-item">
-                                <a href="/pages/login.html" class="nav-link text-white">Sair</a>
+                                <a href="/pages/login.html" class="nav-link text-white">sair</a>
                             </li>
                             <li class="nav-item">
                                 <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
@@ -66,24 +67,76 @@
         
         <main class="flex-fill">
             <div class="container">
-            <h1>Obrigado!!!</h1>
-                <hr>
-                <h3>Anote o número do seu pedido:</h3>
-                <h2 class="text-danger"><b>xxxxxx</b></h2>
-                <p>Você receberá um e-mail com a confirmação do pedido em até 2 horas após a confirmação do pagamento.</p>
-                <p>Caso você tenha feito a compra em boleto, o prazo para a confirmação do pagamento é de até dois dias úteis</p>
-                <p>Tenha um ótimo dia!</p>
-                <p>Desde já, agradecemos a confiança e a preferência por nossos serviços.</p>
-                <p>Cordialmente,<br>
-                Central de Relacionamento RECODETUR.
-                </p>
-                <p>
-                    <a href="/index.html" class="btn btn-danger">Voltar à Página Principal</a>
-                </p>
+                <h1>Minha Conta</h1>
+                <div class="row gx-3">
+                    <div class="col-4">
+                        <div class="list-group">
+                            <a href="/pages/dadosclientes.html" class="list-group-item list-group-item-action ">
+                                <svg class="bi" width="24" height="24" fill="currentColor">
+                                            <use xlink:href="/img/bi.svg#person" />
+                                    </svg>
+                                <i class="fs-6">Dados Pessoais</i>
+                            </a>
+                            <a href="/pages/contatosclientes.html" class="list-group-item list-group-item-action">
+                                <svg class="bi" width="24" height="24" fill="currentColor">
+                                            <use xlink:href="/img/bi.svg#mailbox" />
+                                    </svg>
+                                <i class="fs-6">Contatos</i>
+                            </a>
+                            <a href="/pages/enderecoclientes.html" class="list-group-item list-group-item-action">
+                                <svg class="bi" width="24" height="24" fill="currentColor">
+                                            <use xlink:href="/img/bi.svg#house-door" />
+                                    </svg>
+                                <i class="fs-6">Endereço</i>
+                            </a>
+                            <a href="/pages/pedidoscliente.html" class="list-group-item list-group-item-action">
+                                <svg class="bi" width="24" height="24" fill="currentColor">
+                                            <use xlink:href="/img/bi.svg#truck" />
+                                    </svg>
+                                <i class="fs-6">Pedidos</i>
+                            </a>
+                            <a href="/pages/favoritoscliente.html" class="list-group-item list-group-item-action">
+                                <svg class="bi" width="24" height="24" fill="currentColor">
+                                            <use xlink:href="/img/bi.svg#heart" />
+                                    </svg>
+                                <i class="fs-6">Favoritos</i>
+                            </a>
+                            <a href="/pages/senhacliente.html" class="list-group-item list-group-item-action bg-danger text-light">
+                                <svg class="bi" width="24" height="24" fill="currentColor">
+                                            <use xlink:href="/img/bi.svg#lock" />
+                                    </svg>
+                                <i class="fs-6">Alterar Senha</i>
+                            </a>
+                            <a href="/index.html" class="list-group-item list-group-item-action">
+                                <svg class="bi" width="24" height="24" fill="currentColor">
+                                            <use xlink:href="/img/bi.svg#door-open" />
+                                    </svg>
+                                <i class="fs-6">Sair</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <form class="col-sm-12 col-md-8 col-lg-6">                  
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="txtSenhaAtual" placeholder=" ">
+                            <label for="txtSenhaAtual">Digite aqui sua Senha atual.</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="txtNovaSenha" placeholder=" ">
+                            <label for="txtNovaSenha">Digite aqui uma nova Senha</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="txtConfNovaSenha" placeholder=" ">
+                            <label for="txtConfNovaSenha">Repita a nova senha digitada</label>
+                        </div>
+
+                        <button class="btn btn-lg btn-danger" type="button" onclick="window.location.href=`/pages/confirmacadastrosenha.html`">Alterar Senha</button>
+                        </form> 
+                    </div>
                 </div>
+            </div>
         </main>
-        
-        
+            
         <footer class="border-top text-muted bg-light">
             <div class="container">
                 <div class="row py-3">
@@ -110,8 +163,7 @@
                 </div>
         </footer>
     </div>
-            
     <script src="/js/bootstrap.bundle.js"></script>
 </body>
-        
+
 </html>
