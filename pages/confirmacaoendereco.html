@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="/css/bootstrap.css" />
-    <title>RECODETUR :: Contato</title>
+    <title>RECODETUR :: Endereço de Entrega</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
@@ -19,7 +19,7 @@
 
 <body style="min-width:372px;">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3 ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">RecodeTur</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -63,44 +63,61 @@
             </div>
         </nav>
 
-    <main>
-        <div class="container">
-            <div class="row justify-content-center">
-                <form class="col-sm-10 col-md-8 col-lg-6">
-                    <h1 class="mb-3">Entre em contato</h1>
-
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" autofocus id="txtNome" placeholder=" ">
-                        <label for="txtNome">Nome Completo</label>
+        <main>
+            <div class="container">
+                <h1>Selecione o Endereço de Entrega</h1>
+                <h3 class="mb-4">
+                    Selecione o endereço de entrega e clique em <b>Continuar</b> para prosseguir para a <b>Selecão da forma de pagamento</b>
+                </h3>
+                <div class="d-flex justify-content-around flex-wrap border rounded-top pt-4 px-3">
+                    <div class="mb-4">
+                        <input type="radio" class="btn-check" name="endereco" id="end1" autocomplete="off">
+                        <label class="btn btn-outline-danger p-4 h-100 w-100" for="success-outlined">
+                            <h3>
+                                <b class="text-dark">Minha Casa</b><br>
+                                <hr>
+                                <b>
+                                    Nome do remetente</b><br>
+                                    Rua fulano de tal, 123 <br>
+                                    compulândia/PC <br>
+                                    CEP 01.010-010
+                            </h3>
+                        </label>
                     </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="txtEmail" placeholder=" ">
-                        <label for="txtEmail">E-mail</label>
+                    <div class="mb-4">
+                        <input type="radio" class="btn-check" name="endereco" id="end1" autocomplete="off">
+                        <label class="btn btn-outline-danger p-4 h-100 w-100" for="success-outlined">
+                            <h3>
+                                <b class="text-dark">Meu trabalho</b><br>
+                                <hr>
+                                <b>
+                                    Nome do remetente</b><br>
+                                    Rua fulano de tal, 123 <br>
+                                    compulândia/PC <br>
+                                    CEP 01.010-010
+                            </h3>
+                        </label>
                     </div>
-
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="txtMensagem" placeholder=" " style="height: 200px;"></textarea>
-                        <label for="txtMensagem">Mensagem</label>
+                    <div class="mb-4">
+                        <input type="radio" class="btn-check" name="endereco" id="end1" autocomplete="off">
+                        <label class="btn btn-outline-danger p-4 h-100 w-100" for="success-outlined">
+                            <h3>
+                                <b class="text-dark">Adicione um endereço</b><br>
+                                <hr>
+                                <b class="align-content-center">
+                                    +
+                            </h3>
+                        </label>
                     </div>
-                    <button class="btn btn-lg btn-danger" type="button" onclick="window.location.href=`/pages/confirmacontato.html`">Enviar Mensagem</button>
-                    <p class="mt-3">
-                        O prazo de resposta é de 2 a 5 dias úteis.
-                    </p>
-                    <p class="mt-3">
-                        Atenciosamente,<br>
-                        Central de Relacionamento RECODETUR.
-                    </p>
-                </form>
-            </div>          
-        </div>
-    </main>
+                </div>
+            </div>
+        </main>
 
-    <div style="height: 273px;" class="d-block d-md-none"></div>
-    <div style="height: 153px;" class="d-md-block d-none d-lg-none"></div>
-    <div style="height: 129px;" class="d-lg-block d-md-none"></div>
+        <div style="height: 273px;" class="d-block d-md-none"></div>
+        <div style="height: 153px;" class="d-md-block d-none d-lg-none"></div>
+        <div style="height: 129px;" class="d-lg-block d-none"></div>
 
-    <footer class="border-top text-muted fixed-bottom bg-light">
+        <footer class="border-top text-muted fixed-bottom bg-light">
             <div class="container">
                 <div class="row py-3">
                     <div class="col-12 col-md-4 text-center text-md-start">
@@ -125,8 +142,6 @@
                 </div>
             </div>
         </footer>
-    
-
     <script src="/js/bootstrap.bundle.js"></script>
 </body>
 
