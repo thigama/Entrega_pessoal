@@ -70,3 +70,6 @@ ALTER TABLE destino ADD CONSTRAINT FK_destino_2
     FOREIGN KEY (fk_passagem_id_passagem)
     REFERENCES passagem (id_passagem)
     ON DELETE RESTRICT;
+    
+    
+    select * from recode_entrega;
