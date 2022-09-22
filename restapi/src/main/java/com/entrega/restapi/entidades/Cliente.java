@@ -25,8 +25,7 @@ public class Cliente {
     private String email_cliente;
     @Column(nullable = false)
     private long tel_cliente;
-
-
+    
     public long getId_cliente() {
         return id_cliente;
     }
@@ -75,4 +74,7 @@ public class Cliente {
     public void setTel_cliente(long tel_cliente) {
         this.tel_cliente = tel_cliente;
     }
+
+
+    
 }
