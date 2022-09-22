@@ -1,13 +1,13 @@
-package com.entrega.pessoal;
+package com.entrega.restapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PessoalApplication {
+public class RestapiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PessoalApplication.class, args);
+		SpringApplication.run(RestapiApplication.class, args);
 	}
 
 }

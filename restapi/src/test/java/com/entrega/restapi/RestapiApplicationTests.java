@@ -1,10 +1,10 @@
-package com.entrega.pessoal;
+package com.entrega.restapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PessoalApplicationTests {
+class RestapiApplicationTests {
 
 	@Test
 	void contextLoads() {
