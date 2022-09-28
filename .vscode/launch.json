@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch RecodeApplication",
+            "request": "launch",
+            "mainClass": "com.example.recode.RecodeApplication",
+            "projectName": "recode"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-RestapiApplication<restapi>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
