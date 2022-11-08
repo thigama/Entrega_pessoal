@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <title>RECODETUR :: Fechar pedido</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body style="min-width:372px;">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3 ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">RecodeTur</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a href="/index.html" class="nav-link text-white">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/destinos.html" class="nav-link text-white">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/hospedagem.html" class="nav-link text-white">Hospedagem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/OutrosServiços.html" class="nav-link text-white">Outros Serviços</a>
+                        </li>
+                    </ul>
+                    <div class="align-self-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="/pages/cadastro.html" class="nav-link text-white">Cadastre-se</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/pages/login.html" class="nav-link text-white">Entrar</a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                                    title="X produto(s) no carrinho"><small>X</small></span>
+                                <a href="/pages/carrinho.html" class="nav-link text-white">
+                                    <svg class="bi" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="/img/bi.svg#cart3" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <main>
+        <div class="container">
+            <h1>Carrinho de Compras</h1>
+            <hr>
+            <ul class="list-group mb-3">
+                <li class="list-group-item py-3">
+                    <div class="row g-3">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img src="/img/lugares/franca.jpg" class="img-fluid" width="100%" height="100%" alt="img-franca">
+                            </a>
+                        </div>
+                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-start align-self-center">
+                            <h2><b><a href="#" class="text-decoration-none text-danger">França</a></b></h2>
+                            <h3><small>Passagem LATAM</small></h3>
+                        </div>
+                        <div class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center">
+                            
+                            <div class="text-end mt-2">
+                                
+                                <span class="text-dark"> Valor Total: R$XX,XX</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item py-3">
+                    <div class="text-end">
+                        <h4 class="text-dark mb-3">Valor Total: R$XX,XX</h4>
+                        <a href="/index.html" class="btn btn-outline-success btn-lg">Continuar Comprando</a>
+                        <button class="btn btn-danger btn-lg" type="button" onclick="window.location.href=`/pages/checkout.html`">Finalizar Compra</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="border-top text-muted fixed-bottom bg-light">
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-12 col-md-4 text-center text-md-start">
+                        &copy; 2022 - RecodeTur <br>
+                        Endereço, num, Cidade/Estado <br>
+                        CNPJ XX.XXX.XXX/XXXX-XX
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <a href="/pages/privacidade.html" class="text-decoration-none text-dark">Política de
+                            Privacidade</a><br>
+                        <a href="/pages/termos.html" class="text-decoration-none text-dark">Termos de Uso</a><br>
+                        <a href="/pages/quemsomos.html" class="text-decoration-none text-dark">Quem Somos</a><br>
+                        <a href="/pages/cancelamento.html" class="text-decoration-none text-dark">Cancelamentos</a><br>
+                    </div>
+                    <div class="col-12 col-md-4 text-center text-md-end">
+                        <a href="/pages/contato.html" class="text-decoration-none text-dark">Contato</a><br>
+                        Email: <a href="mailto:email@recodetur.com.br"
+                            class="text-decoration-none text-dark">email@recodetur.com.br</a><br>
+                        Telefone: <a href="phone:XXXXXXXXXXX"
+                            class="text-decoration-none text-dark">(XX)XXXXX-XXXX</a><br>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
