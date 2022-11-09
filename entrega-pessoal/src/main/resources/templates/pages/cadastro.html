@@ -64,35 +64,35 @@
         <div class="container">
             <h1>Informe seus dados</h1>
             <hr>
-            <form>
+            <form method="POST" action="/cadastro">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <fieldset class="row">
                             <legend>Dados Pessoais</legend>
                             <div class="mb-3">
                                 <label for="txtNome" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="txtNome">
+                                <input type="text" class="form-control" name="txtNome">
                             </div>
                             
                             <div class="mb-3 col-md-6 col-xl-4">
                                 <label for="txtCPF" class="form-label">CPF</label>
                                 <span class="form-text">(Somente números)</span>
-                                <input type="text" class="form-control" id="txtCPF">
+                                <input type="text" class="form-control" name="txtCPF">
                             </div>
                             <div class="mb-3 col-md-6 col-xl-4">
                                 <label for="txtNascimento" class="form-label">Data de Nascimento</label>
-                                <input type="text" class="form-control" id="txtNascimento" placeholder="dd/mm/aaaa">
+                                <input type="text" class="form-control" name="dataNasc" placeholder="dd/mm/aaaa">
                             </div>
                         </fieldset>
                         <fieldset class="row">
                             <legend>Contatos</legend>
                             <div class="mb-3 col-md-8">
                                 <label for="txtEmail" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="txtEmail">
+                                <input type="email" class="form-control" name="txtEmail">
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="txtTelefone" class="form-label">Telefone</label>
-                                <input type="tel" class="form-control" id="txtTelefone" placeholder="XXXXXXXXXXX">
+                                <input type="tel" class="form-control" name="txtTelefone" placeholder="XXXXXXXXXXX">
                                 <span class="form-text">(Com DDD, somente números)</span>
                             </div>
                         </fieldset>
@@ -103,7 +103,7 @@
                             <div class="mb-3 col-md-6 col-lg-4">
                                 <label for="txtCEP" class="form-label">CEP</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="txtCEP">
+                                    <input type="text" class="form-control" name="txtCEP">
                                     <span class="input-group-text">
                                         <svg class="bi" width="24" height="24" fill="currentColor">
                                             <use xlink:href="/img/bi.svg#hourglass-split" />
@@ -116,33 +116,33 @@
                             </div>
                             <div class="mb-3 col-md-4">
                                 <label for="txtNum" class="form-label">Número</label>
-                                <input type="text" class="form-control" id="txtNum">
+                                <input type="text" class="form-control" name="txtNum">
                             </div>
                             <div class="mb-3 col-md-8">
                                 <label for="txtComplemento" class="form-label">Complemento</label>
-                                <input type="text" class="form-control" id="txtComplemento">
+                                <input type="text" class="form-control" name="txtComplemento">
                             </div>
                             <div class="mb-3">
                                 <label for="txtReferencia" class="form-label">Referência</label>
-                                <input type="text" class="form-control" id="txtReferencia">
+                                <input type="text" class="form-control" name="txtReferencia">
                             </div>
                         </fieldset>
                          <fieldset class="row">
                             <legend>Senha de Acesso</legend>
                             <div class="mb-3">
                                 <label for="txtSenha" class="form-label">Senha</label>
-                                <input type="password" class="form-control" id="txtSenha">
+                                <input type="password" class="form-control" name="txtSenha">
                             </div>
                             <div class="mb-3">
                                 <label for="txtConfirmaSenha" class="form-label">Digite Novamente a Senha</label>
-                                <input type="password" class="form-control" id="txtConfirmaSenha">
+                                <input type="password" class="form-control" name="txtConfirmaSenha">
                             </div>
                         </fieldset>
                     </div>
                 </div>
                 <hr>
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" value="" id="checkPromo">
+                    <input type="checkbox" class="form-check-input" value="" name="checkPromo">
                     <label for="checkPromo" class="form-check-label">Desejo receber informações sobre Promoções.</label>
                 </div>
                 <div class="mb-3">
