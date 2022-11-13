@@ -3,47 +3,144 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Website</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Website.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <link rel="stylesheet" href="/entrega-pessoal/src/main/resources/static/css/bootstrap.css" />
+    <title>@ViewData["Title"] - RECODETUR :: Sua Agência de Viagens</title>
+     <link rel="apple-touch-icon" sizes="180x180" href="/entrega-pessoal/src/main/resources/static/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/entrega-pessoal/src/main/resources/static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/entrega-pessoal/src/main/resources/static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/entrega-pessoal/src/main/resources/static/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/entrega-pessoal/src/main/resources/static/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/entrega-pessoal/src/main/resources/static/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/entrega-pessoal/src/main/resources/static/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        p.truncate-3l {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+<body style="min-width:372px;">
+    <div class="d-flex flex-column wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3 fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Website</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="/entrega-pessoal/src/main/resources/templates/index.html">RecodeTur</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a href="/entrega-pessoal/src/main/resources/templates/index.html" class="nav-link text-white">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a href="/entrega-pessoal/src/main/resources/templates/pages/destinos.html" class="nav-link text-white">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/entrega-pessoal/src/main/resources/templates/pages/hospedagem.html" class="nav-link text-white">Hospedagem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/entrega-pessoal/src/main/resources/templates/pages/OutrosServiços.html" class="nav-link text-white">Outros Serviços</a>
                         </li>
                     </ul>
+                    <div class="align-self-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="/entrega-pessoal/src/main/resources/templates/pages/cadastro.html" class="nav-link text-white">Cadastre-se</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/entrega-pessoal/src/main/resources/templates/pages/login.html" class="nav-link text-white">Entrar</a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                                    title="X produto(s) no carrinho"><small>X</small></span>
+                                <a href="/entrega-pessoal/src/main/resources/templates/pages/carrinho.html" class="nav-link text-white">
+                                    <svg class="bi" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="/entrega-pessoal/src/main/resources/static/img/bi.svg#cart3" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
-    </header>
+    <header class="container">
+            <div id="carrouselMain" class="carousel slide carousel-dark" data-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrouselMain" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carrouselMain" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carrouselMain" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center" data-bs-interval="3000">
+                        <img src="/entrega-pessoal/src/main/resources/static/img/slides/slide01.jpg" alt="" class="img-fluid d-none d-md-block w-100">
+                        <img src="/entrega-pessoal/src/main/resources/static/img/slides/slide01small.jpg" alt="" class="img-fluid d-block d-md-none">
+                        <h2 class="mb-3"><a href="/entrega-pessoal/src/main/resources/templates/pages/destinos.html"
+                                class="text-decoration-none text-dark">Destinos</a></h2>
+                    </div>
+                    <div class="carousel-item text-center" data-bs-interval="3000">
+                        <img src="/entrega-pessoal/src/main/resources/static/img/slides/slide02.jpg" alt="" class="img-fluid d-none d-md-block w-100">
+                        <img src="/entrega-pessoal/src/main/resources/static/img/slides/slide02small.jpg" alt="" class="img-fluid d-block d-md-none">
+                        <h2 class="mb-3"><a href="/entrega-pessoal/src/main/resources/templates/pages/hospedagem.html"
+                                class="text-decoration-none text-dark">Hospedagem</a></h2>
+                    </div>
+                    <div class="carousel-item text-center" data-bs-interval="3000">
+                        <img src="/entrega-pessoal/src/main/resources/static/img/slides/slide03.jpg" alt="" class="img-fluid d-none d-md-block w-100">
+                        <img src="/entrega-pessoal/src/main/resources/static/img/slides/slide03small.jpg" alt="" class="img-fluid d-block d-md-none">
+                        <h2 class="mb-3"><a href="/entrega-pessoal/src/main/resources/templates/pages/outrosServicos.html"
+                                class="text-decoration-none text-dark">Outros Serviços</a></h2>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrouselMain"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrouselMain"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <hr class="mt-3" />
+        </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Website - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <footer class="border-top text-muted bg-light">
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-12 col-md-4 text-center text-md-start">
+                        &copy; 2022 - RecodeTur <br>
+                        Endereço, num, Cidade/Estado <br>
+                        CNPJ XX.XXX.XXX/XXXX-XX
+                    </div>
+                        <div class="col-12 col-md-4 text-center">
+
+                            <a href="/entrega-pessoal/src/main/resources/templates/pages/privacidade.html" class="text-decoration-none text-dark">Política de
+                                Privacidade</a><br>
+                            <a href="/entrega-pessoal/src/main/resources/templates/pages/termos.html" class="text-decoration-none text-dark">Termos de Uso</a><br>
+                        <a href="/entrega-pessoal/src/main/resources/templates/pages/quemsomos.html" class="text-decoration-none text-dark">Quem Somos</a><br>
+                        <a href="/entrega-pessoal/src/main/resources/templates/pages/cancelamento.html" class="text-decoration-none text-dark">Cancelamentos</a><br>
+                    </div>
+                    <div class="col-12 col-md-4 text-center text-md-end">
+                        <a href="/entrega-pessoal/src/main/resources/templates/pages/contato.html" class="text-decoration-none text-dark">Contato</a><br>
+                        Email: <a href="mailto:email@recodetur.com.br"
+                            class="text-decoration-none text-dark">email@recodetur.com.br</a><br>
+                        Telefone: <a href="phone:XXXXXXXXXXX"
+                            class="text-decoration-none text-dark">(XX)XXXXX-XXXX</a><br>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/entrega-pessoal/src/main/resources/static/js/bootstrap.bundle.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
